@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+    <div id="mydiv">My Div</div>
+        <h2>Adding Event to div Tag</h2>
+    
+    <script>
+        document.getElementById('mydiv').addEventListener("click",clickEvent);
+
+        function clickEvent() {
+            alert('hi');
+            document.getElementById('mydiv').innerHTML = 'Div Has been clicked!!';
+
+        }
+    </script>
+</body>
+</html>

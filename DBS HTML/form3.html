@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Form</title>
+</head>
+<body>
+    <form name="Myform">
+        <input type="text" name="username" id="username" placeholder="Enter user name"><br>
+        <input type="password" name="password" id="password" placeholder="Enter your password"><br>
+        <input type="button" value="login" onclick="processLogin(Myform)"/>
+    </form>
+    <p id="pp">This is a paragraph</p><input type="button" value="click" onclick="document.getElementById('pp').innerHTML='Hey learning JS'">
+    <script>
+        function processLogin(Myform){
+            console.log('inside processlogin function');
+            alert('Username : '+Myform.username.value);
+            alert('Password : '+Myform.password.value);
+            document.form['form'].submit();
+
+        }
+    </script>
+</body>
+</html>

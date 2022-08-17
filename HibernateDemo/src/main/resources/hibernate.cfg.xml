@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  
+    <property name="connection.url">jdbc:mysql://localhost:3306/training?serverTimezone=UTC&amp;useSSL=false</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">mysqlroot</property>
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+  
+    <!-- 'show_sql' set true to check sql statements on console else set to false -->
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <!-- use 'create' to Create tables on application startup else use 'update'-->
+    <property name="hbm2ddl.auto">create</property>
+    
+    <!-- <mapping class="com.hibernate.demos.HibernateDemo.entity.Customer"></mapping> -->
+    <!-- <mapping class="com.hibernate.demos.HibernateDemo.entity.Supplier"></mapping> -->
+    <!-- <mapping class="com.hibernate.demos.HibernateDemo.entity.Email"></mapping> -->
+    <!-- <mapping class="com.hibernate.demos.HibernateDemo.entity.Employee"></mapping> -->
+    <mapping class="com.hibernate.demos.HibernateDemo.entity.ReaderEntity"></mapping>
+    <mapping class="com.hibernate.demos.HibernateDemo.entity.SubscriptionEntity"></mapping>
+    
+</session-factory>
+</hibernate-configuration>
