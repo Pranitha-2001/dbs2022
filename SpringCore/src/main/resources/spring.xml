@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+ 
+<bean id = "product" class = "com.dbs.demos.SpringCore.entity.Product">
+<constructor-arg name="id" value="1"></constructor-arg>
+<constructor-arg name="name" value="laptop"></constructor-arg>
+<constructor-arg name="price" value="50000"></constructor-arg>
+<constructor-arg name="brand" ref="brand"></constructor-arg>
+</bean>
+<bean id = "product1" class = "com.dbs.demos.SpringCore.entity.Product">
+<property name="id" value="1"></property>
+<property name="name" value="laptop"></property>
+<property name="price" value="40000"></property>
+<property name="brand" ref="brand"></property>
+</bean>
+<bean id = "brand" class = "com.dbs.demos.SpringCore.entity.Brand">
+<property name="id" value="1"></property>
+<property name="name" value="Dell"></property>
+
+</bean>
+ 
+ 
+</beans>
+ 
